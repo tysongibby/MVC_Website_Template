@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "";
+    ViewData["HeaderTitle"] = "";
+    ViewData["HeaderLine1"] = "";
+    ViewData["HeaderLine2"] = "Intelligent Mental Wellness Platform";
+    ViewData["TM_HeaderLine2"] = "<span class=\"text-transform-none\">&trade;</span>";
+    ViewData["HeaderImage"] = "url(../img/headers/Dawn_of_Healing.jpg)";
+    ViewData["PageTitle"] = " ";
+    ViewData["PageSubTitle"] = "Saving Lives, One Mind at a Time";
+    ViewData["TM_PageSubTitle"] = "<span class=\"text-transform-none\">&trade;</span>";
+    ViewData["PageIntro"] = " ";       
+    ViewData["PageDown"] = "Content";
+}
+
+<!-- ########## M A I N  C O N T E N T ########## -->
+    <main data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <partial name="_Header" />
+        <!-- ########## C O N T E N T ########## -->
+        <section class="pt-3 pt-lg-5 pb-6 pb-lg-8 text-center" id="Content" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+            <div class="container">
+
+                @*place content here*@
+
+                <div class="overflow-hidden text-center">
+                    <partial name="_CallToActionDark" />
+                </div>
+            </div>
+        </section>
+        <!-- / end  C O N T E N T -->
+    </main>
+<!-- / end  M A I N -->

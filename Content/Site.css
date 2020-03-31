@@ -1,0 +1,172 @@
+﻿
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont,"Josefin_Sans-Regular", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --gray-previdence: #333333;
+    --med-gray-previdence: #616161;
+    --light-gray-previdence: #9C9C9C;
+    --red-previdence: #800000;
+}
+
+@font-face {
+    font-family: 'Josefin_Sans-Regular';
+    src: url('../Fonts/Josefin_Sans-Regular/JosefinSans-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../Fonts/Josefin_Sans-Regular/JosefinSans-Regular.eot') format('embedded-opentype'), /* IE6-IE8 */
+    url('../Fonts/Josefin_Sans-Regular/JosefinSans-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../Fonts/Josefin_Sans-Regular/JosefinSans-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../Fonts/Josefin_Sans-Regular/JosefinSans-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../Fonts/Josefin_Sans-Regular/JosefinSans-Regular.svg#JosefinSansRegular') format('svg'); /* Legacy iOS */
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column */
+
+body {
+
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    
+}
+
+
+/*@media (min-width: 992px) {
+    body {
+        
+    }
+}*/
+
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 30%;
+    bottom: 20px;
+    left: 30%;
+    width: 40%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #800000;
+    text-align: center;
+    background-color: rgba(230,230,230,.75)
+}
+
+a {
+    color: #333333;
+    text-decoration:none;
+}
+
+    a:hover {
+        text-decoration: none;
+        color: #800000;
+    }
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #333333;
+    background-color: transparent;
+    text-decoration:none;
+}
+    
+    .btn-link:hover {
+        text-decoration:none;
+        color:#800000;
+    }
+
+/* New behaviors - not overrides */
+
+/* Previdence customizations */
+
+.bg-light-gray {
+    background-color: #9C9C9C !important;
+}
+
+.bg-previdence-gray {
+    background-color: #333333 !important;
+}
+
+.bg-previdence-red {
+    background-color: #800000 !important;
+}
+
+.previdence-font {
+    font-family: Josefin_Sans-Regular;
+    font-weight: bold;
+}
+
+.previdence-gray {
+    color: #333333 !important;
+    font-weight:bold;
+}
+
+.previdence-red {
+    color: #800000;
+    font-weight: bold;
+}
+
+.previdence-white {
+    color: #E6E6E6 !important;
+    font-weight:bold;
+}
+
+.btn-previdence-red {
+    background-color: #800000;
+    color: #E6E6E6;
+    border-color: #800000;
+    /*border-radius: 25px;*/
+}
+
+    .btn-previdence-red:hover,
+    .btn-previdence-red:focus,
+    .btn-previdence-red:active {
+        background-color: #800000;
+        color: #E6E6E6;
+        border-color: #333333;
+    }
+
+
+/* Set width on the form input elements since they're 100% wide by default */

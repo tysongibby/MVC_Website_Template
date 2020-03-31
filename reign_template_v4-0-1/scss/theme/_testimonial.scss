@@ -1,0 +1,71 @@
+.testimonial-avatar {
+  position: absolute;
+  width: 100px !important;
+  height: 100px;
+  left: 50%;
+  transform: translate(-50%, -127%);
+  background-size: cover;
+  backface-visibility: hidden;
+  transition: all .4s ease-in;
+	background-repeat: no-repeat;
+}
+.testimonial-description {
+  z-index: -999;
+}
+.testimonial-quote {
+  position: relative;
+  line-height: 100%;
+  top: 0;
+  left: 0;
+
+  &:before {
+    position: absolute;
+    content: '“';
+    height: 2rem;
+    width: 2rem;
+    top: 2.3rem;
+    color: #fff;
+    font-size: 8rem;
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-light;
+    opacity: 0.5;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.testimonial {
+  .owl-theme.owl-nav-outer .owl-nav{
+    margin-top: 0;
+    cursor: pointer;
+    [class*=owl-] {
+      opacity: 0.5;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      color: $white !important;
+      font-size: 1.5rem !important;
+      background-color: transparent !important;
+      box-shadow: none;
+      @include hover-focus {
+        color: $white;
+        opacity: 1 !important;
+      }
+    }
+    .owl-prev{ left: - map_get($spacers, 9); }
+    .owl-next{ right: - map_get($spacers, 9); }
+  }
+  .owl-dots{
+    bottom: -7.5rem;
+  }
+}
+.testimonial-company-logo{
+  width: 6.25rem !important;
+}
+@include media-breakpoint-up(md) {
+  
+  .testimonial-quote::before {
+    left: -2.5rem;
+    transform: initial;
+    top: 2rem;
+  }
+}

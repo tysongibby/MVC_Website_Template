@@ -1,0 +1,66 @@
+.floating-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.floating-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0; 
+  padding: $floating-label-input-padding-x $floating-label-input-padding-y;
+  line-height: $floating-label-line-height;
+  color: $gray-600;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .4s ease;
+  text-align: left;
+}
+.floating-label-input {
+  &:-ms-input-placeholder{
+    color: transparent;
+  }
+  &::-ms-input-placeholder{
+    color: transparent;
+  }
+  &::-webkit-input-placeholder,
+  &::placeholder {
+    color: transparent;
+  }
+  &:not(:placeholder-shown),
+  &:focus {
+    padding-top: ($floating-label-input-padding-x  + $floating-label-input-padding-y) * 1.1;
+    padding-bottom: $floating-label-input-padding-y/3;
+
+    ~ .floating-label {
+      padding-top: 0;
+      padding-bottom: 0;
+      line-height: 1.1rem;
+      // font-size: 10px;
+    }
+
+  }
+}
+
+.floating-label-group-lg {
+  .floating-label {
+    padding: $floating-label-input-padding-x-lg $floating-label-input-padding-y-lg;
+    line-height: $floating-label-line-height-lg;
+  }
+
+  .floating-label-input {
+    &:not(:placeholder-shown),
+    &:focus {
+      padding-top: ($floating-label-input-padding-x-lg  + $floating-label-input-padding-y-lg) * 0.5;
+      padding-bottom: $floating-label-input-padding-y/3;
+  
+      ~ .floating-label {
+        padding-top: 0.25rem;
+        padding-bottom: 0;
+        // font-size: 10px;
+      }
+  
+    }
+  }
+}

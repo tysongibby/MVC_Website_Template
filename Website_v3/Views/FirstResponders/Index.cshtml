@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "First-Responder Mental Wellness";
+    ViewData["HeaderTitle"] = "Healing Begins";
+    ViewData["HeaderLine1"] = "with";    
+    ViewData["HeaderLine2"] = "Intelligent Mental Wellness Platform";
+    ViewData["TM_HeaderLine2"] = "<span class=\"text-transform-none\">&trade;</span>";
+    ViewData["HeaderImage"] = "url(../img/headers/First_Responders.png)";
+    ViewData["PageTitle"] = "First Responders";
+    ViewData["PageSubTitle"] = "Guardian Resiliency";
+    ViewData["TM_PageSubTitle"] = "";
+    ViewData["PageIntro"] = "Previdence for First Responders was created so that agencies of any size can maintain the best behavioral risk safety practices for all personnel. Previdence for First Responders provides a consistent, efficient Standard of Care process for mental Wellness. This allows agencies to Identify, Assess, Manage, and Monitor all personnel who are at risk of causing harm to themselves or others from one convenient platform.";
+    ViewData["Discount"] = "GovernmentEligibility";        
+    ViewData["PageDown"] = "Content";
+}
+
+<!-- ########## M A I N  C O N T E N T ########## -->
+    <main data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <partial name="_Header" />
+        <section class="py-5" id="Content" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+            <div class="container">
+                <partial name="_PageTitle" />
+            </div>
+        </section>
+        <partial name="_Services" />
+        <partial name="_Discount" />
+    </main>
+<!-- / end  M A I N  C O N T E N T -->

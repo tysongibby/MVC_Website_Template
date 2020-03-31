@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title | Previdence | Mental Health eDSS</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/971f8efccd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/non-npm/owl.carousel/owl.carousel.css" rel="stylesheet">
+    <link href="~/lib/non-npm/remodal/remodal.css" rel="stylesheet">
+    <link href="~/lib/non-npm/remodal/remodal-default-theme.css" rel="stylesheet">
+    <link href="~/lib/non-npm/theme/theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/cookiealert.css" />
+</head>
+<body>
+    <partial name="_Preloader" />
+    <partial name="_TopNavbar" />
+    @*<partial name="_CookieConsentPartial" />*@
+    @RenderBody()
+    <partial name="_Footer" />
+    <partial name="_GDPR_Alert" />
+
+    <!--
+    ####################################################
+    J A V A S C R I P T - jquery, bootstrap, plugins
+    Place at the end of the document so the pages load faster
+    ####################################################
+    -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery.min.js"></script>
+    <script src="~/lib/non-npm/plugins/plugins.min.js"></script>
+    <script src="~/lib/non-npm/stickyfilljs/stickyfill.min.js"></script>
+    <script src="~/lib/non-npm/fortawesome/all.min.js"></script>
+    <script src="~/lib/non-npm/rellax/rellax.min.js"></script>
+    <script src="~/lib/non-npm/progressbar/progressbar.min.js"></script>
+    <script src="~/lib/non-npm/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/lib/non-npm/isotope-packery/packery-mode.pkgd.min.js"></script>
+    <script src="~/lib/non-npm/owl.carousel/owl.carousel.js"></script>
+    <script src="~/lib/non-npm/remodal/remodal.min.js"></script>
+    <script src="~/lib/non-npm/hover-dir/jquery.hoverdir.js"></script>
+    <script src="~/lib/non-npm/typed/typed.js"></script>
+    <script src="~/lib/non-npm/theme/theme.min.js"></script>
+    <script src="~/lib/non-npm/GDPR_Alert/cookiealert.js"></script>
+    @RenderSection("Scripts", required: false)
+    <!-- / end J A V A S C R I P T -->
+</body>
+</html>

@@ -1,0 +1,139 @@
+.gridder{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.gridder-list { 
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  border-radius: $border-radius;
+}
+.gridder-list:nth-child(n) {
+  margin-bottom: 0.875rem;
+  margin-right: 1%;
+}
+.gridder-show { 
+  display: block;
+  float: left;
+  width: 100%;
+  position: relative;
+  background: #eee;
+}
+.gridder-content{
+  display: none;
+}
+
+.gridder-show{
+  padding: 1.875rem;
+  background-color: #eee;
+  margin-bottom: 0.875rem;
+  border-radius: $border-radius;
+}
+.gridder-list,
+.gridder-show {
+  font-size: 0.875rem;
+}
+.gridder-navigation{
+  .gridder-nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+    background-color: $gray-300;
+    color: $black;
+
+    &.prev {
+      left: 0;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+    &.next {
+      right: 0;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+    &.disabled{
+        opacity: .5;
+    }
+  }
+  .gridder-close {
+    cursor: pointer;
+    height: 1.875rem;
+    padding: 0.4375rem;
+    position: absolute;
+    right: 0.625rem;
+    top: 0.625rem;
+    width: 1.875rem;
+    z-index: 2;
+    color: $gray-600;
+  }
+}
+
+.gridder-list{
+  cursor: pointer;
+  &:hover{
+      opacity: .8
+  }
+}
+
+.hasSelectedItem{
+  .gridder-list{
+      opacity: .5;
+      &.selectedItem{
+          opacity: 1;
+      }
+  }
+}
+.selectedItem{
+  position: relative;
+}
+.selectedItem:after {
+  position: absolute;
+  content: '';
+  border: 0.625rem solid #eee;
+  border-top: 0;
+  border-left: 0.75rem solid transparent;
+  border-right: 0.75rem solid transparent;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@include media-breakpoint-up(sm) {
+  .gridder-list {
+    width: 49.25%; 
+  }
+  .gridder-list:nth-child(n) {
+    margin-bottom: 1.5%;
+    margin-right: 1.5%;
+  }
+  .gridder-show {
+    margin-bottom: 1.5%;
+  }
+  .gridder-list:nth-of-type(2n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .selectedItem:after {
+    bottom: -0.75rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .gridder-show {
+    padding: 3.125rem;
+  }
+  .gridder-list {
+    width: 32.66%; 
+  }
+  .gridder-list:nth-child(n) {
+    margin-bottom: 1%;
+    margin-right: 1%;
+  }
+  .gridder-list:nth-of-type(3n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}

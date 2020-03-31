@@ -1,0 +1,11 @@
+
+.team-item {
+  .hoverbox-content {
+    background-color: rgba($black, 0.6);
+  }
+  @include hover-focus {
+    .hoverbox-content {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Nonprofit Subscription Eligibility";
+    ViewData["HeaderTitle"] = "Nonprofit Eligibility";
+    ViewData["HeaderLine1"] = "";
+    ViewData["HeaderLine2"] = "Intelligent Mental Wellness Platform";
+    ViewData["TM_HeaderLine2"] = "<span class=\"text-transform-none\">&trade;</span>";
+    ViewData["HeaderImage"] = "url(../img/headers/Dawn_of_Healing.jpg)";
+    ViewData["PageTitle"] = "Previdence Nonprofit Subscription";
+    ViewData["PageSubTitle"] = "Eligibility Definition";
+    ViewData["TM_PageSubTitle"] = "";
+    ViewData["PageIntro"] = "";
+    ViewData["PageDown"] = "Content";
+}
+
+<!-- ########## M A I N  C O N T E N T ########## -->
+    <main data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <partial name="_Header" />
+        <!-- ########## S U B S C R I B E R  A C C E P T A B L E  U S E  P O L I C Y ########## -->
+        <section class="pt-3 pt-lg-5 pb-6 pb-lg-8 text-center" id="Content" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+            <div class="container">
+                <partial name="_PageTitle" />
+                <div class="row justify-content-center text-left">
+                    <div class="col-lg-7">
+                        <div class="overflow-hidden">
+                            <p>All Previdence eligible nonprofit customers must be located or reside in the United States or it’s territories.  Qualified nonprofit organizations are those entities that both have a charitable purpose or mission and are recognized by the Internal Revenue Service (IRS) as exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code (IRC).</p>
+                            <p>Political entities, such as election campaigns or entities that support political parties or political party agendas are not eligible.</p>
+                            <p>If a controversy exists as to an organization's eligibility, Previdence retains the right to determine in its sole discretion the eligibility of the organization for the specific transaction in question.</p>
+                            <p>Public libraries not owned by government entities may qualify as an eligible nonprofit organization without charitable status. Please see our <a class="font-weight-bold text-800" style="text-decoration:none" asp-area="" asp-controller="DiscountEligibility" asp-action="EducationEligibility">Education Eligibility: Public Libriaries</a> criteria or contact <a class="font-weight-bold text-800" style="text-decoration:none" asp-area="" asp-controller="Home" asp-action="Contact">Previdence sales</a> for more information.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow-hidden text-center">
+                    <partial name="_CallToActionDark" />
+                </div>
+            </div>
+        </section>
+        <!-- / end  S U B S C R I B E R  A C C E P T A B L E  U S E  P O L I C Y -->
+    </main>
+<!-- / end M A I N  C O N T E N T -->

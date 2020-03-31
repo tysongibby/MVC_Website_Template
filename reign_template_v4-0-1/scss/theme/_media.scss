@@ -1,0 +1,9 @@
+/*-----------------------------------------------
+|   Media Service
+-----------------------------------------------*/
+.media-img { width: 3.125rem; }
+.fun-fact-icon{ width: 2.5rem; }
+
+@include media-breakpoint-up(md) {
+  .fun-fact-icon{ width: 3.5rem; }
+}

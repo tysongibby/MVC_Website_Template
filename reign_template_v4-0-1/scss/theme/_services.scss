@@ -1,0 +1,13 @@
+.service-item {
+  border: $border-width solid transparent;
+  border-radius: $border-radius;
+  overflow: hidden;
+  transition: $transition-base;
+}
+.service-icon{
+  width: 3.5rem;
+  margin-bottom: map_get($spacers, 3);
+}
+.service-item:hover {
+  border: $border-width solid $border-color;
+}

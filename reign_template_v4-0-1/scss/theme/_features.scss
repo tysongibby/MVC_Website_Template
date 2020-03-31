@@ -1,0 +1,75 @@
+.checked-indicator{
+  display: none;
+}
+.hr-feature {
+  width: 12rem;
+}
+.feature-item {
+  
+  @include hover-focus {
+    .checked-indicator{
+      color: $black;
+    }
+  }
+
+}
+@include media-breakpoint-up(lg) {
+  .line-indicator {
+      &:after {
+          content: "";
+          position: absolute;
+          height: 2.25rem;
+          right: 2rem;
+          border-left: $border-width solid $border-color;
+      }
+  }
+  .line-indicator-top::after {
+    bottom: 0.3rem;
+    right: 2.5rem;
+    border-top: $border-width solid $border-color;
+  }
+  .line-indicator-top-1::after {
+    width: 0;
+  } 
+  .line-indicator-top-2::after {
+      width: 50%;
+  }
+  .line-indicator-top-3::after {
+      width: 88%;
+  }
+  .line-indicator-bottom::after {
+    top: 0.25rem;
+    border-bottom: $border-width solid $border-color;
+  }
+  .line-indicator-bottom-1::after {
+    width: 36%;
+    right: 2.5rem;
+  }
+  .line-indicator-bottom-2::after {
+      width: 15%;
+      right: 2.5rem;
+  }
+  .line-indicator-bottom-3::after {
+      width: 50%;
+      right: 2.5rem;
+  }
+  .checked-indicator{
+      display: block;
+      position: absolute;
+      border: $border-width solid $border-color;
+      height: 2.25rem;
+      width: 2.25rem;
+      border-radius: 50%;
+      background-color: $white;
+      line-height: 2.250rem;
+      text-align: center;
+      color: $gray-600;
+      transition: all 0.2s ease;
+  }
+  .checked-indicator-top {
+      transform: translate(-97%, -105%);
+  }
+  .checked-indicator-bottom {
+      transform: translate(-97%, 90%);
+  }
+}

@@ -1,0 +1,52 @@
+/*-----------------------------------------------
+|   Buttons
+-----------------------------------------------*/
+.btn{ 
+  text-transform: uppercase; 
+  transition: $transition-base;
+}
+.btn-link{
+  font-weight: $font-weight-bold; 
+  text-transform: none;
+}
+.btn.btn-outline-light.border-2x { border-color: rgba($white, 0.5); }
+.btn-outline-light:hover, .btn-light, .btn-light:hover { color: $dark; }
+.btn-xs{ padding: .2rem 1rem; font-size: $font-size-sm; }
+.btn-play {
+  color: $white;
+  border: 1px solid $white;
+  width: 3.75rem;
+  height: 3.75rem;
+  position: relative;
+  display: block;
+  line-height: 3.75rem;
+  border-radius: $border-radius;
+
+  @include hover-focus {
+    color: $black;
+  }
+}
+.btn-dark {
+  color: $gray-300;
+}
+.btn-back-to-top {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 999;
+  background: #eee;
+  display: none;
+  height: 1.75rem;
+  width: 1.75rem;
+  text-align: center;
+  line-height: 1.75rem;
+  font-size: 14px;
+  color: #000;
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+.btn-back-to-top:hover {
+  color: #000;
+  opacity: 1;
+}

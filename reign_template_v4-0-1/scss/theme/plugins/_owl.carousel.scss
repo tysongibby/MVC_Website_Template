@@ -1,0 +1,255 @@
+/*-----------------------------------------------
+|   Owl Carousel
+-----------------------------------------------*/
+.owl-theme{
+  .owl-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    .owl-dot {
+      padding: map_get($spacers, 3) 0;
+      span{
+        border-radius: $border-radius;
+        width: 3rem;
+        height: 2px;
+        transition: background-color 0.4s ease-in-out;
+      }
+
+      &.active{ span { background-color: $primary; } }
+    }
+  }
+
+  .owl-nav{
+    margin-top: 0;
+    cursor: pointer;
+    [class*=owl-] {
+      opacity: 0.5;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      font-size: modular-scale(2);
+      transition: opacity 0.4s ease-in-out;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      text-align: center;
+      color: $gray-700;
+      margin: 0;
+      background-color: rgba($white, 0.8) !important;
+      box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+      z-index: 99;
+      @include hover-focus {
+        background-color: $white;
+        color: $black;
+        opacity: 1 !important;
+      }
+    }
+    .owl-prev{ left: map_get($spacers, 5); }
+    .owl-next{ right: map_get($spacers, 5); }
+  }
+
+  @include hover-focus { .owl-nav { [class*=owl-] { opacity: 0.5; } } }
+
+  &.nav-square{
+    .owl-nav{
+      margin-top: 0;
+      [class*=owl-] {
+        border-radius: 0;
+      }
+    }
+  }
+  &.owl-nav-outer{
+    .owl-nav{
+      .owl-prev{ left: map_get($spacers, 5); }
+      .owl-next{ right: map_get($spacers, 5); }
+    }
+  }
+  &.owl-dots-inner{
+    .owl-dots{
+      bottom: 0 !important;
+
+    }
+  }
+  &.owl-dot-round{
+    .owl-dots{
+      .owl-dot{
+        span{
+          height: 0.625rem;
+          width: 0.625rem;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  @mixin owl-theme-variant($theme-color){
+    .owl-dots{
+      .owl-dot{
+        span{
+          border: 1px solid $theme-color !important;
+        }
+        &.active{
+          span{
+            background-color: $theme-color !important;
+          }
+        }
+      }
+    }
+  }
+  &.owl-theme-info{ @include owl-theme-variant($info); }
+  &.owl-theme-success{ @include owl-theme-variant($success); }
+  &.owl-theme-warning{ @include owl-theme-variant($warning); }
+  &.owl-theme-danger{ @include owl-theme-variant($danger); }
+  &.owl-theme-black{ @include owl-theme-variant(black); }
+  &.owl-theme-white{ @include owl-theme-variant(white); }
+
+
+  // Owl Carousel equal height
+  &.owl-eq-items{
+    .owl-stage {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .owl-item{
+      display: flex;
+      height: auto !important;
+    }
+  }
+}
+
+/*-----------------------------------------------
+|   Owl Carousel Customization
+-----------------------------------------------*/
+.owl-loaded{
+  &.owl-dots-inner .owl-dots{ bottom: map_get($spacers, 1) !important; }
+  .owl-dots{
+    .owl-dot{
+      span{
+        position: relative;
+        overflow: hidden;
+        height: 0.6rem;
+        width: 0.6rem;
+        display: block;
+        margin: map_get($spacers, 2);
+        border-radius: 50%;
+
+        &:after{
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-color: $white;
+          top: 0;
+          left: 0;
+          transform: translateX(-100%);
+          border-radius: $border-radius;
+        }
+      }
+
+      &.active{
+        span{
+          background-color: rgba($white, 0.6) !important;
+        }
+      }
+    }
+  }
+}
+
+@keyframes owlNavAnimate {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0); }
+  85% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+.owl-theme.owl-theme-vertical{
+  .owl-dots{
+    height: 1.125rem;
+    margin-top: 0 !important;
+    transform: translate3d(50%, -50%, 0) rotate(90deg);
+    top: 50%;
+    right: 0.5625rem;
+    margin-right: - map_get($spacers, 4);
+    transform-origin: center;
+    text-align: center;
+  }
+  &.owl-dots-inner .owl-dots{
+    margin-right: map_get($spacers, 4);
+  }
+}
+
+/*-----------------------------------------------
+|   Only Right nav
+-----------------------------------------------*/
+.owl-theme-nav-right .owl-nav .owl-prev { display: none !important; }
+
+/*-----------------------------------------------
+|   Height fix
+-----------------------------------------------*/
+.owl-carousel.h-100 .owl-item, .owl-carousel.h-100 .owl-stage, .owl-carousel.h-100 .owl-stage-outer{
+  height: 100%;
+}
+.header-slider.owl-theme{
+  overflow: hidden;
+  .owl-nav{
+    margin-top: 0;
+    cursor: pointer;
+    [class*=owl-] {
+      opacity: 1;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      height: auto;
+      width: auto;
+      font-size: modular-scale(2);
+      text-align: center;
+      color: $gray-700;
+      // color: $white !important;
+      background-color: transparent !important;
+      box-shadow: none;
+      color: $white !important;
+      font-size: 2rem !important;
+      margin: 0;
+      z-index: 99;
+      @include hover-focus {
+        background-color: $white;
+        color: $black;
+        opacity: 1 !important;
+      }
+    }
+    .indicator-arrow {
+      height: 1.125rem;
+      width: 1.125rem;
+    }
+    .owl-prev,
+    .owl-next {
+      outline: 0;
+    }
+    .owl-prev{ 
+      height: 2rem;
+      width: 2rem;
+      transition: left 0.5s ease;
+      .indicator-arrow-left {
+        transform: translateY(-50%) translateX(-50%) rotate(-46deg);
+      }
+      left: -1.5rem;
+    }
+    .owl-next{ 
+      height: 2rem;
+      width: 2rem;
+      .indicator-arrow-right {
+        transform: translateY(-50%) translateX(-50%) rotate(134deg);
+      }
+      right: -1.5rem; 
+      transition: right 0.6s ease;
+    }
+  }
+
+  &:hover {
+    .owl-prev {
+      left: 2.5rem;
+    }
+    .owl-next {
+      right: 2.5rem;
+    }
+  }
+}

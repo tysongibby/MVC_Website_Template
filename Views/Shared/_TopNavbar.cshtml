@@ -1,0 +1,32 @@
+﻿<!--
+####################################################
+T O P  N A V B A R
+####################################################
+-->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-theme fixed-top py-0">
+    <div class="container">
+        <a class="navbar-brand fs-3 logo-secondary-style-light"  href="../home/">pr<span class="logo-primary-style-light">e</span>vidence<sup class="fs-0 font-weight-light">&reg;</sup></a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto" id="navbar-one-page">
+                <li class="nav-item dropdown dropdown-on-hover">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="nav-link-text">Services</span></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
+                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Education">K - 12</a>
+                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="FirstResponders">First Responders</a>
+                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Military">Military</a>
+                        @*<a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Corporate">Corporate</a>*@
+                        @*<a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Wellness">Wellness</a>*@
+
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="FAQ" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text">FAQ<span class="text-lowercase">s</span></span></a></li>
+                <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="About" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text">About</span></a></li>
+                <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text">Contact</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://login.previdence.com/" data-fancyscroll="data-fancyscroll" data-offset="64"><span class="nav-link-text">Login</span></a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- / end  T O P  N A V B A R -->

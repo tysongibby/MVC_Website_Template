@@ -1,0 +1,196 @@
+@mixin pseudo{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	// transform-origin: 50%;
+	transition: transform 0.3s ease-in-out;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	backface-visibility: hidden;
+}
+// /*///////////////////////////////////
+// // Hover Animation
+// ///////////////////////////////////*/
+.btn{
+	&[class*='hvr-'] {
+		position: relative;
+		overflow: hidden;
+		z-index: 0;
+		transform: perspective(1px) translateZ(0);
+		background-color: transparent;
+		vertical-align: middle;
+
+		@include hover-focus {
+			color: #fff;
+		}
+	}
+	&[class*='hvr-']:after{ @include pseudo }
+
+
+	&.hvr-sweep-top:after { transform: scaleY(1); transform-origin: 50% 100%; }
+	&.hvr-sweep-bottom:after { transform: scaleY(1); transform-origin: 50% 0%; }
+	&.hvr-sweep-left:after { transform: scaleX(1); transform-origin: 100% 0%; }
+	&.hvr-sweep-right:after { transform: scaleX(1); transform-origin: 0% 0%; }
+	&.hvr-sweep-collapseX:after { transform: scaleX(0); transform-origin: 50%; }
+	&.hvr-sweep-collapseY:after { transform: scaleY(0); transform-origin: 50%; }
+	
+	&:active,
+	&:hover,
+	&:focus{ 
+		&.hvr-sweep-top:after {	transform: scaleY(0); }
+		&.hvr-sweep-bottom:after { transform: scaleY(0); }
+		&.hvr-sweep-left:after {	transform: scaleX(0); }
+		&.hvr-sweep-right:after {	transform: scaleX(0); }
+		&.hvr-sweep-collapseX:after { transform: scaleX(1) }
+		&.hvr-sweep-collapseY:after { transform: scaleY(1) }
+	}
+	&[class*='btn-outline-'] {
+
+		&.hvr-sweep-top:after { transform-origin: 50% 0; transform: scaleY(0); }
+		&.hvr-sweep-bottom:after { transform-origin: 50% 100%; transform: scaleY(0); }
+		&.hvr-sweep-left:after { transform-origin: 0% 0%; transform: scaleX(0); }
+		&.hvr-sweep-right:after { transform-origin: 100% 0%; transform: scaleX(0); }
+		&.hvr-sweep-collapseX:after { transform: scaleX(1); transform-origin: 50%; }
+		&.hvr-sweep-collapseY:after { transform: scaleY(1); transform-origin: 50%; }
+
+
+		&:active,
+		&:hover,
+		&:focus{
+			&.hvr-sweep-top:after { transform: scaleY(1); }
+			&.hvr-sweep-bottom:after { transform: scaleY(1); }
+			&.hvr-sweep-left:after { transform: scaleX(1); }
+			&.hvr-sweep-right:after { transform: scaleX(1); }
+			&.hvr-sweep-collapseX:after { transform: scaleX(0); }
+			&.hvr-sweep-collapseY:after { transform: scaleY(0); }
+	
+		}
+		&.hvr-sweep-link:after{
+			height: 2px;
+			top: auto;
+			transform: translateX(-102%);
+			background-color: map-get($colors, primary);
+		}
+		@include hover-focus {
+			&.hvr-sweep-link{
+				box-shadow: none;
+				&:after{ transform: translateX(0); }
+			}
+		}
+	}
+}
+
+.btn-outline-white[class*='hvr-']{ &:after, &:before{ background-color: $white; } }
+.btn-outline-light[class*='hvr-']{ 
+	@include hover-focus {
+		color: $black;
+	}
+ }
+
+@each $color in map_keys($theme-colors) {
+
+	
+	.btn-outline-#{$color} {
+		&:before, &:after { background-color: map-get($theme-colors, $color); }
+
+		&.hvr-sweep-collapseX,
+		&.hvr-sweep-collapseY {
+			background-color: map-get($theme-colors, $color) ;
+	
+			&:after {
+				background-color: $white;
+			}
+		}
+	}
+	.btn-#{$color} {
+		&.hvr-sweep-collapseX,
+		&.hvr-sweep-collapseY {
+			background-color: map-get($theme-colors, $color) ;
+	
+			&:after {
+				background-color: $white;
+			}
+		}
+		&:after { 
+			background-color: map-get($theme-colors, $color);
+		}
+		&[class*='hvr-'] {
+			@include hover-focus {
+				color: map-get($theme-colors, $color);
+			}
+			&:active {
+				background-color: transparent !important;
+				color: $white !important;
+			}
+		}
+
+	}
+}
+
+
+.btn-outline-white {
+	@include hover-focus {
+		.play-icon {
+			stroke: #000;
+			transition-delay: 0.1s;
+		}
+	}
+}
+.hover-sweep-top {
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		z-index: -1;
+		transition: all 0.3s ease-in-out;
+	}
+
+	@include hover-focus {
+		background-color: transparent;
+		&:after {
+			top: 0;
+		}
+
+		* {
+			color: $black !important;
+		}
+	}
+}
+// .hvr-sweep-top {
+// 	position: relative;
+// 	&:hover {
+// 		background-color: transparent;
+
+// 		&:before {
+// 			background-color: $black;
+// 			transform: scaleY(1);
+// 		}
+// 	}
+// 	&::before{
+// 		@include pseudo;
+// 		left: 0;
+// 		right: 0;
+// 		top: 0;
+// 		bottom: 0;
+// 		transform: scaleY(0);
+// 		transform-origin: 50% 0;
+// 	}
+// }
+
+.hvr-underline-none:hover{ text-decoration: none; }
+a.hover-color-white { 
+	transition: all 0.2s ease; 
+	&:hover {
+		color: $light !important;
+	}
+}

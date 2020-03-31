@@ -1,0 +1,18 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/reign_template_v4-0-1",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "reign_template_v4-0-1": {
+      "commandName": "IIS",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost/reign_template_v4-0-1/pages/pages/one-page.html",
+      "applicationUrl": "http://localhost/"
+    }
+  }
+}

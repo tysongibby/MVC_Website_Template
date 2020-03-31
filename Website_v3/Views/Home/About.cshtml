@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewData["Title"] = "About Us";
+    ViewData["HeaderTitle"] = "About Us";
+    ViewData["HeaderLine1"] = "";
+    ViewData["HeaderLine2"] = "Intelligent Mental Wellness Platform";
+    ViewData["TM_HeaderLine2"] = "<span class=\"text-transform-none\">&trade;</span>";
+    //ViewData["HeaderImage"] = "url(../img/headers/Teamwork.png)";
+    ViewData["HeaderImage"] = "url(../img/headers/teamwork.png)";
+    ViewData["PageTitle"] = "About Us";
+    ViewData["PageSubTitle"] = "Saving Lives, One Mind at a Time";
+    ViewData["TM_PageSubTitle"] = "<span class=\"text-transform-none\">&trade;</span>";
+    ViewData["PageIntro"] = " ";
+    ViewData["PageDown"] = "Content";
+}
+<!-- ########## M A I N  C O N T E N T ########## -->
+    <main data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <partial name="_Header" />
+        <!-- ########## A B O U T ########## -->
+        <section class="py-5" id="Content" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+            <div class="container">
+                <partial name="_PageTitle" />
+                <!-- STORY -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <!-- feature -->
+                        <div data-zanim-timeline="{}">
+                            <div class="overflow-hidden">
+                                <p class="minor-title">The Beginning</p>
+                            </div>
+                            <div class="overflow-hidden">
+                                <p class="mb-0 text-left">
+                                    The initial concept of the Previdence Intelligent Mental Wellness Platform was first created by clinicians as a paper-based decision support system (DSS) to estimate and manage behavioral risk. These Previdence DSS tools created a more effective way to provide consistent care with better patient outcomes.
+                                </p>
+                            </div>
+                            <div class="overflow-hidden">
+                                <hr class="my-3" />
+                            </div>
+                        </div>
+                        <!-- / end feature -->
+                        <!-- feature -->
+                        <div>
+                            <div class="overflow-hidden">
+                                <p class="minor-title">The First Revolution</p>
+                            </div>
+                            <div class="overflow-hidden">
+                                <p data-zanim-xs='{"duration":1.5,"delay":0}'>
+                                    After optimizing the paper-based system for 15 years, the Previdence DSS was converted to an Electronic Decision Support System (eDSS) in 2002 to streamline the healing process even more. This further increased treatment effectiveness by automating the creation of individualized patient treatment management plans and intelligent reporting tools.
+                                </p>
+                            </div>
+                            <div class="overflow-hidden">
+                                <hr class="my-3" />
+                            </div>
+                        </div>
+                        <!-- / end feature -->
+                        <!-- feature -->
+                        <div>
+                            <div class="overflow-hidden">
+                                <p class="minor-title">
+                                    The Best Results
+                                </p>
+                            </div>
+                            <div class="overflow-hidden">
+                                <p>
+                                    In a partnership with the Defense Health Agency Warrior Transistion Unit, Previdence has helped over 180,000 military personnel in 180 locations around the world. The suicide rate of personnel that participated in the program was reduced by 56%. Previdence has also helped make significant decreases in domestic violence and other harmful behaviors.
+                                </p>
+                            </div>
+                            <div class="overflow-hidden">
+                                <hr class="my-3" />
+                            </div>
+                        </div>
+                        <!-- / end feature -->
+                        <!-- feature -->
+                        <div>
+                            <div class="overflow-hidden">
+                                <p class="minor-title">
+                                    The Next Revolution
+                                </p>
+                            </div>
+                            <div class="overflow-hidden">
+                                <p>
+                                    In their tradition of innovation, Previdence continues to innovate, by combining their time tested Electronic Decision Support System with the most advanced Artificial Intelligence Previdence has created a new breed of Intelligent Decisioning called the Previdence Intelligent Decision Support Engine or iDSE&trade;.
+                                </p>
+                            </div>
+                            @*<div class="overflow-hidden">
+                        <hr class="my-3" data-zanim-xs='{"duration":1.5,"delay":0.2}' />
+                    </div>*@
+                        </div>
+                        <!-- / end feature -->
+
+                    </div>
+                </div>
+                <!-- CALL TO ACTION -->
+                <div class="overflow-hidden text-center">
+                    <partial name="_CallToActionDark" />
+                </div>
+                <!-- /  end CALL TO ACTION -->
+                <!-- / end  A B O U T -->
+            </div>
+        </section>
+        <!-- / end  A B O U T -->
+        <partial name="_Testimonials" />
+        <partial name="_ClientBanner" />
+    </main>
+<!-- / end  M A I N  C O N T E N T -->

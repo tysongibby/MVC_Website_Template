@@ -1,0 +1,87 @@
+/*-----------------------------------------------
+|   Documentation link and Prism
+-----------------------------------------------*/
+:not(pre) > code[class*='language-'], pre[class*='language-'] {
+  background-color: $gray-100;
+  border: $border-width solid $gray-100;
+  // border-radius: $border-radius;
+}
+
+code[class*='language-'], pre[class*='language-'] { font-family: $font-family-monospace; }
+.contains-anchor{
+  a{
+    opacity: 0;
+    transition-property: opacity;
+  }
+  @include hover-focus{
+    a{
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
+}
+
+.components-nav{
+  font-family: $font-family-base;
+  font-size: 0.707rem;
+  font-weight: $font-weight-medium;
+  letter-spacing: 0.01rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+
+.components-nav li a{
+  color: $gray-600;
+}
+.component-preview{
+  border: 0.125rem solid $gray-100;
+  border-radius: $border-radius;
+}
+
+/*-----------------------------------------------
+|   Component examples
+-----------------------------------------------*/
+/*-----------------------------------------------
+|   Borders
+-----------------------------------------------*/
+.component-example{
+  font-family: $font-family-sans-serif;
+  [class^='border']{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    margin: .75rem;
+    background-color: $gray-100;
+  }
+}
+/*-----------------------------------------------
+|   Grid
+-----------------------------------------------*/
+.grid-component [class^=col]{
+  border: 1px solid map-get($grays, '400');
+  text-align: center;
+  margin-bottom: 10px;
+  color: map-get($grays, '700');
+  padding: 0.5rem;
+  font-size: map-get($font-sizes, '-1' );
+}
+
+/*-----------------------------------------------
+|   Prism
+-----------------------------------------------*/
+
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted{
+  color: #2f6f9f;
+}
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted{
+  color: #4f9fcf;
+}
+// .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string,
+.token.atrule, .token.attr-value, .token.keyword{
+  color: #d44950;
+}
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string{
+  background: transparent;
+}

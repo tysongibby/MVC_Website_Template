@@ -1,0 +1,43 @@
+/*-----------------------------------------------
+|   Opacity
+-----------------------------------------------*/
+.opacity-75{
+  opacity: 0.75;
+}
+.opacity-50{
+  opacity: 0.50;
+}
+
+/*-----------------------------------------------
+|   Object fit and Z-index
+-----------------------------------------------*/
+.fit-cover{ object-fit: cover; }
+.z-index-1{ z-index: 1; }
+
+/*-----------------------------------------------
+|   Zanimation
+-----------------------------------------------*/
+*[data-zanim-trigger]{ opacity: 0; }
+
+/*-----------------------------------------------
+|   Puppeteer
+-----------------------------------------------*/
+.puppeteer{
+  .fancynavbar{ display: none !important; }
+  .main, .footer{ width: 100vw !important;  }
+  *[data-zanim-trigger]{ opacity: 1 !important; }
+}
+
+
+
+@include media-breakpoint-up(lg) {
+  .vertical-line {
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    right: 0;
+    background-color: $border-color;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

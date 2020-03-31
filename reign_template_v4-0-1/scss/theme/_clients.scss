@@ -1,0 +1,25 @@
+.clients {
+  .owl-theme.owl-nav-outer .owl-nav{
+    margin-top: 0;
+    cursor: pointer;
+    [class*=owl-] {
+      opacity: 0.5;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      color: $white !important;
+      font-size: 1.5rem !important;
+      background-color: transparent !important;
+      box-shadow: none;
+      @include hover-focus {
+        color: $white;
+        opacity: 1 !important;
+      }
+    }
+    .owl-prev{ left: - map_get($spacers, 5); }
+    .owl-next{ right: - map_get($spacers, 5); }
+  }
+  .owl-dots{
+    bottom: -3rem;
+  }
+}

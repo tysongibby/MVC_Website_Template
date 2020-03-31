@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewData["HeaderTitle"] = "Intellingent Healing Begins";
+    ViewData["HeaderLine1"] = "with";
+    ViewData["HeaderLine2"] = "Intelligent Mental Wellness Platform";
+    ViewData["TM_HeaderLine2"] = "<span class=\"text-transform-none\">&trade;</span>";
+    ViewData["HeaderImage"] = "url(../img/headers/Teamwork.png)";
+    ViewData["PageTitle"] = "Intelligent Mental Wellness";
+    ViewData["PageSubTitle"] = "Saving Lives, One Mind at a Time";
+    ViewData["TM_PageSubTitle"] = "<span class=\"text-transform-none\">&trade;</span>";
+    ViewData["PageIntro"] = "In helping to treat over 180,000 people with mental concerns, Previdence has developed a suite of intelligent technologies that allow professionals to Assess Mental Health, Identify Behavioral Risk, and Generate Safety and Treatment Plans. This intelligent technology suite has aided professionals in saving the lives of soldiers, students, children, first-responders and more.";
+    ViewData["PageDown"] = "testimonials";
+}
+
+<!-- ########## M A I N  C O N T E N T ########## -->
+    <main data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <!-- ########## H E A D E R ########## -->
+        <section class="text-center overflow-hidden py-0" id="top">
+            <div class="bg-holder overlay overlay-2 parallax" style="background-image:url(../img/headers/Dawn_of_Healing.jpg);" data-rellax-percentage="0.5"></div>
+            <div class="header-overlay"></div>
+            <div class="container" data-zanim-xs='{"duration":1.5,"delay":0.1}'>
+                <div class="d-flex flex-center vh-100">
+                    <div class="header-text">
+                        <div class="overflow-hidden fs-1">
+                            <p class="text-uppercase fs-md-2 text-400 ls-2 m-0 p-0">Healing begins with</p>
+                            <p class="my-0 py-0 fs-8"><span class="fs-md-9 logo-secondary-style-light">pr<span class="logo-primary-style-light">e</span>vidence<sup class="fs-3 font-weight-light">&reg;</sup></span></p>
+                            <p class="text-uppercase fs-1 text-400 ls-2 my-0 py-0 font-weight-medium">Intelligent Mental Wellness Platform</p>
+                            <p class="text-uppercase font-italic fs-0 text-400 ls-2 pt-1">Saving Lives, One Mind at a Time<sup>&trade;</sup></p>
+                        </div>
+                        <div class="mt-2" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+                            <h5 class="logo-secondary-color-light" style="text-transform:none">What kind of organization are you?</h5>
+                            <a class="btn btn-outline-light hvr-sweep-top mt-0 px-4" asp-area="" asp-controller="FirstResponders" asp-action="Index">First Responders</a>&nbsp
+                            <a class="btn btn-outline-light hvr-sweep-top mt-0 px-4" asp-area="" asp-controller="K12" asp-action="Index">K-12 Student Safety</a>
+                        </div>
+                        <div data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+                            <a class="btn btn-outline-light hvr-sweep-top mt-1 px-4 " asp-area="" asp-controller="Military" asp-action="Index">Military</a>&nbsp
+                            <a class="btn btn-outline-light hvr-sweep-top mt-1 px-4" asp-area="" asp-controller="Corporate" asp-action="Index">Corporate</a>&nbsp
+                            <a class="btn btn-outline-light hvr-sweep-top mt-1 px-4" asp-area="" asp-controller="CustomSolutions" asp-action="Index">Custom</a>
+                        </div>
+                        <div data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+                            <a class="btn btn-light hvr-sweep-top mt-5 px-4" asp-area="" asp-controller="Home" asp-action="Contact">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <partial name="_PageDown" />
+            </div>
+        </section>
+        <!-- / end  H E A D E R  -->
+        <partial name="_Testimonials" />
+        <partial name="_ClientBanner" />
+        <section class="text-center overflow-hidden py-0" id="Content">
+            <section class="py-5" id="Content">
+                <div class="container">
+                    <partial name="_PageTitle" />
+                </div>
+            </section>
+            <partial name="_Services" />
+        </section>
+    </main>
+<!-- / end  ########## M A I N  C O N T E N T ########## -->

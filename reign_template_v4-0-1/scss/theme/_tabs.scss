@@ -1,0 +1,113 @@
+/*-----------------------------------------------
+|   Tabs
+-----------------------------------------------*/
+@keyframes fadeInLeft{
+  0%{
+    opacity: 0;
+    transform: translateX(-3.125rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutRight{
+  0%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(3.125rem);
+  }
+}
+
+
+@mixin navigation-bar(){
+  .nav-bar{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    flex-flow: row wrap;
+    position: relative;
+    // border-bottom: ($border-width * 2) solid $gray-100;
+
+    .tab-indicator-trail{
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -0.125rem;
+      height: 0.125rem;
+      width: 100%;
+      background-color: $gray-900;
+      border-radius: 0.125rem;
+    }
+    .tab-indicator{
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: -0.125rem;
+      height: 0.125rem;
+      background-color: $white;
+      transition: left 0.4s ease-in-out, right 0.2s ease-in-out;
+      &.transition-reverse{ transition: left 0.2s ease-in-out, right 0.4s ease-in-out; }
+      z-index: 1;
+      border-radius: 0.125rem;
+    }
+
+    &.nav-bar-right{ justify-content: flex-end; }
+    &.nav-bar-center{ justify-content: center; }
+
+    .nav-bar-item{
+      // color: $white;
+      padding: map_get($spacers, 2) map_get($spacers, 3);
+      font-size: $font-size-base;
+      line-height: $font-size-base;
+      font-family: $font-family-base;
+      display: inline-block;
+      font-weight: $font-weight-normal;
+      margin-bottom: 0;
+      text-align: center;
+      cursor: pointer;
+      border: $border-width solid transparent;
+      &.active{ color: $primary;}
+      @include media-breakpoint-between(sm, md){
+        padding: map_get($spacers, 2) map_get($spacers, 5);
+      }
+    }
+    &.nav-bar-indicator-dark{
+      .tab-indicator {
+        background-color: $black;
+      }
+    }
+  }
+}
+
+.fancy-tab{
+  display: flex;
+  flex-direction: column;
+
+  @include navigation-bar();
+
+  .tab-contents{
+    margin-top: 1rem;
+    position: relative;
+
+    .tab-content{
+      backface-visibility: hidden;
+
+      &:not(.active){
+        position: absolute;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        opacity: 1;
+        animation: fadeOutRight .25s ease forwards;
+        display: none;
+      }
+
+      &.active{ animation: fadeInLeft .5s ease forwards; }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+/*-----------------------------------------------
+|   Pagination
+-----------------------------------------------*/
+.page-item{ margin: 0 map_get($spacers, 1); }
+
+.pagination-rounded {
+  .page-link {
+    border-radius: $border-radius;
+  }
+}

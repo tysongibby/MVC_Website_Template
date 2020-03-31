@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Mental Wellness Software Services";
+    ViewData["Title"] = "Software Services";
+    ViewData["HeaderTitle"] = "Mental Wellness Services";
+    ViewData["HeaderLine1"] = "";
+    ViewData["HeaderLine2"] = "Intelligent Mental Wellness Platform";
+    ViewData["TM_HeaderLine2"] = "<span class=\"text-transform-none\">&trade;</span>";
+    ViewData["HeaderImage"] = "url(../img/headers/bizw2.png)";
+    ViewData["PageTitle"] = "Previdence Intelligent Mental Wellness Services";
+    ViewData["PageSubTitle"] = "Saving Lives, One Mind at a Time";
+    ViewData["TM_PageSubTitle"] = "<span class=\"text-transform-none\">&trade;</span>";
+    ViewData["PageIntro"] = "In helping to treat over 180,000 people with mental concerns, Previdence has developed a suite of intelligent technologies that allow professionals to Assess Mental Health, Identify Behavioral Risk, and Generate Safety and Treatment Plans. This intelligent technology suite has aided professionals in saving the lives of soldiers, students, children, first-responders and more.";
+    ViewData["PageDown"] = "Content";
+}
+
+<!-- ########## M A I N  C O N T E N T ########## -->
+<main data-zanim-timeline="{}" data-zanim-trigger="scroll">
+    <partial name="_Header" />
+    <section class="pt-5 pb-0" id="Content" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+        <div class="container">
+            <partial name="_PageTitle" />
+        </div>
+    </section>
+    <!-- ########## S E R V I C E S  B U T T O N  L I N K S ########## -->
+    <section class="text-center pt-0 pb-5" id="Content" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+        <div class="container">
+            <!-- LINK BUTTONS -->
+            <div class="row justify-content-center">
+                <!-- Link Button -->
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                    <a class="btn btn-outline-dark hvr-sweep-top py-3 px-3 btn-block h-100 ls-2 font-weight-normal fs-1" asp-area="" asp-controller="K12" asp-action="Index">K-12 Student Safety</a>
+                </div>
+            </div>
+            <!-- / end  Link Button -->
+            <!-- Link Button -->
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                    <a class="btn btn-outline-dark hvr-sweep-top py-3 px-3 btn-block h-100 ls-2 font-weight-normal fs-1" asp-area="" asp-controller="FirstResponders" asp-action="Index">First Responders</a>
+                </div>
+            </div>
+            <!-- / end  Link Button -->
+            <!-- Link Button -->
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                    <a class="btn btn-outline-dark hvr-sweep-top py-3 px-3 btn-block h-100 ls-2 font-weight-normal fs-1" asp-area="" asp-controller="Military" asp-action="Index">Military</a>
+                </div>
+            </div>
+            <!-- / end  Link Button -->
+            <!-- Link Button -->
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                    <a class="btn btn-outline-dark hvr-sweep-top py-3 px-3 btn-block h-100 ls-2 font-weight-normal fs-1" asp-area="" asp-controller="Corporate" asp-action="Index">Corporate </a>
+                </div>
+            </div>
+            <!-- / end  Link Button -->
+            <!-- Link Button -->
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                    <a class="btn btn-outline-dark hvr-sweep-top py-3 px-3 btn-block h-100 ls-2 font-weight-normal fs-1" asp-area="" asp-controller="CustomSolutions" asp-action="Index">Custom Solutions</a>
+                </div>
+            </div>
+            <!-- / end  Link Button -->
+        </div>
+        <!-- / end  LINK BUTTONS -->
+        <partial name="_CallToActionDark" />
+    </section>
+    <!-- / end   S E R V I C E S  B U T T O N  L I N K S -->
+</main>
+<!-- / end  M A I N  C O N T E N T -->

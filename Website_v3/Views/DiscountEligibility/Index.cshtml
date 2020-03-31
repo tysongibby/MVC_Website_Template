@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Discount Eligibility";
+    ViewData["HeaderTitle"] = "Discount Eligibility";
+    ViewData["HeaderLine1"] = "";
+    ViewData["HeaderLine2"] = "Intelligent Mental Wellness Platform";
+    ViewData["TM_HeaderLine2"] = "<span class=\"text-transform-none\">&trade;</span>";
+    ViewData["HeaderImage"] = "url(../img/headers/Dawn_of_Healing.jpg)";
+    ViewData["PageTitle"] = "Discount Eligibility";
+    ViewData["PageSubTitle"] = "";
+    ViewData["TM_PageSubTitle"] = "";
+    ViewData["PageIntro"] = "";
+    ViewData["PageDown"] = "Content";
+}
+
+<!-- ########## M A I N  C O N T E N T ########## -->
+    <main data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <partial name="_Header" />
+        <section class="pt-5 pb-0" id="Content" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+            <div class="container">
+                <partial name="_PageTitle" />
+            </div>
+        </section>
+        <!-- ########## D I S C O U N T S ########## -->
+        <section class="text-center pt-0 pb-5" id="Content" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+            <!-- DISCOUNT LIST -->
+            <div class="container justify-content-center">
+                <!-- discount link -->
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                        <a class="btn btn-outline-dark hvr-sweep-top py-3 px-3 btn-block h-100 ls-2 font-weight-normal fs-1" asp-area="" asp-controller="DiscountEligibility" asp-action="EducationEligibility">Education Eligibility</a>
+                    </div>
+                </div>
+                <!-- / end  discount link -->
+                <!-- discount link -->
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                        <a class="btn btn-outline-dark hvr-sweep-top py-3 px-3 btn-block h-100 ls-2 font-weight-normal fs-1" asp-area="" asp-controller="DiscountEligibility" asp-action="GovernmentEligibility">Government Eligibility</a>
+                    </div>
+                </div>
+                <!-- / end  discount link -->
+                <!-- discount link -->
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3">
+                        <a class="btn btn-outline-dark hvr-sweep-top py-3 px-3 btn-block h-100 ls-2 font-weight-normal fs-1" asp-area="" asp-controller="DiscountEligibility" asp-action="NonprofitEligibility">Nonprofit Eligibility</a>
+                    </div>
+                </div>
+                <!-- / end  discount link -->
+
+            </div>
+            <!-- / end  DISCOUNT LIST -->
+            <partial name="_CallToActionDark" />
+        </section>
+        <!-- / end  D I S C O U N T S -->
+
+
+    </main>
+<!-- / end  M A I N  C O N T E N T -->

@@ -1,0 +1,26 @@
+[
+  {
+    "outputFileName": "wwwroot/lib/jquery/dist/jquery.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/non-npm/theme/theme.min.css",
+    "inputFiles": [
+      "wwwroot/lib/non-npm/theme/theme.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/non-npm/theme/theme.min.js",
+    "inputFiles": [
+      "wwwroot/lib/non-npm/theme/theme.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/non-npm/theme/theme-rtl.min.css",
+    "inputFiles": [
+      "wwwroot/lib/non-npm/theme/theme-rtl.css"
+    ]
+  }
+]

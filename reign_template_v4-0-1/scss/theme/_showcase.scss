@@ -1,0 +1,48 @@
+/*-----------------------------------------------
+|   Showcase
+-----------------------------------------------*/
+
+.hover-underline-none:hover {
+  text-decoration: none;
+}
+.quote.showcase-quote:before {
+  color: $black;
+  opacity: 0.2;
+}
+.showcase-item-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  @include hover-focus {
+    opacity: 1;
+  }
+}
+.avatar-showcase-testimonial {
+  position: absolute;
+  width: 100px !important;
+  height: 100px;
+  left: 50%;
+  transform: translate(-50%, -127%);
+  background-size: cover;
+  backface-visibility: hidden;
+  transition: all .4s ease-in;
+  background-repeat: no-repeat;
+  text-align: center;
+  line-height: 100px;
+  background-color: #525B83;
+  color: $white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+@include media-breakpoint-up(lg) {
+  .showcase-default-padding-left {
+    padding-left: 4.9%;
+  }
+  .showcase-feature-padding-right {
+    padding-right: 4.9%;
+  }
+}

@@ -1,0 +1,39 @@
+/*-----------------------------------------------
+|   Browser Fixing
+-----------------------------------------------*/
+// Firefox fixed
+.firefox{
+  .dropcap:first-letter{ margin-top: 0.175em; }
+}
+
+
+// Edge fixed
+.edge{
+  .bg-holder{
+    .bg-video{
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+// IE fixed
+.ie{
+  .align-items-center.minh-100vh{ height: 100vh; }
+  .align-items-end.minh-100vh{ height: 100vh; }
+  img{ max-width: 100%; }
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .align-items-center.minh-100vh{ height: 100vh; }
+  .align-items-end.minh-100vh{ height: 100vh; }
+  img{ max-width: 100%; }
+  .card-img-top{ height: 100%; overflow: hidden; }
+  .minh-100vh{
+    height: 100vh;
+  }
+  .hoverbox-content img{
+    width: 100%;
+  }
+}
