@@ -15,7 +15,7 @@
     @*<partial name="_CookieConsentPartial" />*@
     @RenderBody()
     <partial name="_Footer" />
-    <partial name="_GDPR_Alert" />
+    @*<partial name="_GDPR_Alert" />*@
 
     <!-- ########## S C R I P T S - jquery, bootstrap, plugins ########## -->
     <!-- ########## goes at the end of the page for faster loading ########## -->
@@ -23,5 +23,8 @@
     @RenderSection("Scripts", required: false)
     <partial name="_Scripts" />
     <!-- / end S C R I P T S -->
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5825530.js"></script>
+    <!-- End of HubSpot Embed Code -->
 </body>
 </html>
