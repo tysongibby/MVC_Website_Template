@@ -3,12 +3,13 @@
         <div class="bg-holder overlay parallax" style="background-image:@ViewData["HeaderImage"];background-position: center 58%;"></div>    
         <div class="header-overlay"></div>
         <div class="container" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
-            <div class="d-flex align-items-center pt-10 pb-6">
+            <div class="d-flex align-items-center pt-10 pb-8"> <!-- pb on this line changes top spacing for PageDown Arrow -->
                 <div class="header-text">
-                    <div class="overflow-hidden">                        
+                    <div class="overflow-hidden">
                         <p class="text-uppercase text-400 fs-2 ls-1 m-0 p-0">@Html.Raw(ViewData["HeaderTitle"])&nbsp;@ViewData["HeaderLine1"]</p>
                         @*<p class="text-uppercase text-400 ls-1 m-0 p-0 font-weight-medium">@ViewData["HeaderLine1"]</p>*@
-                        <p class="my-0 py-0 fs-8"><span class="fs-md-9 logo-secondary-style-light">pr<span class="logo-primary-style-light">e</span>vidence<sup class="fs-3 font-weight-light">&reg;</sup></span></p>
+                        @*<p class="my-0 py-0 fs-8"><span class="fs-md-9 logo-secondary-style-light">pr<span class="logo-primary-style-light">e</span>vidence<sup class="fs-3 font-weight-light">&reg;</sup></span></p>*@
+                        <p class="my-0 py-0 fs-8"><img src="~/img/logo/Logo-coral-white_600x112.png" alt="Previdence logo" class="mw-100"></p>
                         <p class="text-uppercase text-400 fs-1 ls-2 my-0 py-0 font-weight-medium">@ViewData["HeaderLine2"]@Html.Raw(ViewData["TM_HeaderLine2"])</p>
                     </div>
                     <partial name="_CallToActionLight" />

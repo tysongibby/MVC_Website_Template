@@ -12886,12 +12886,14 @@ label {
 /*-----------------------------------------------
 |   Up/Down Indicator
 -----------------------------------------------*/
+/* change Page-Down indicator size here and at .indicator */
 .indicator-arrow {
   display: block;
   position: absolute;
+  /*position: relative;*/
   left: 50%;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border-left: 3px solid #fff;
   border-top: 3px solid #fff;
   -webkit-transform: translateX(-50%) rotate(45deg);
@@ -12907,10 +12909,12 @@ label {
   top: 1.75rem;
 }
 
+/* change Page-Down indicator size here and at .indicator-arrow */
 .indicator {
   position: absolute;
-  height: 2.5rem;
-  width: 2.5rem;
+  /*position: relative;*/
+  height: 1.5rem;
+  width: 1.5rem;
   left: 50%;
   z-index: 2;
 }

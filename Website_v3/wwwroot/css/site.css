@@ -167,6 +167,20 @@ a {
         border-color: #1861ac;
     }
 
+/* Down Arrow */
+.down-arrow {
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+}
+
+.down-arrow-img {
+    height: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+
 /* Order Lists
 -------------------------------------------------- */
 ol h5 {
