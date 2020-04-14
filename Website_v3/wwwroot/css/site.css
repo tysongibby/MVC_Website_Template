@@ -83,7 +83,7 @@ a.navbar-brand {
 }*/
 
 
-a {
+/*a {
     color: #f5f5f5;
     text-decoration: none;
     background-color: transparent;
@@ -92,12 +92,18 @@ a {
     a:hover {
         color: #f5f5f5;
         text-decoration: none;
-    }
+    }*/
+
+.link-primary-color {
+    color: #FF6F62;
+    text-decoration: none;
+    background-color: transparent;    
+}
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    /*background-color: #1b6ec2;*/
+    /*border-color: #1861ac;*/
 }
 
 /* Logo Styles */

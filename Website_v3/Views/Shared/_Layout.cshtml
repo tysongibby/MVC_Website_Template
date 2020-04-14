@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex">
-    @*<partial name="_GoogleAnalytics" />*@
+    @*<meta name="robots" content="noindex">*@
+    <partial name="_GoogleAnalytics" />
     <title>@ViewBag.Title | Previdence | Intelligent Mental Wellness Platform</title>
     <partial name="_Favicons" />
     <partial name="_HeadSources" />    
@@ -17,14 +17,12 @@
     <partial name="_Footer" />
     @*<partial name="_GDPR_Alert" />*@
 
-    <!-- ########## S C R I P T S - jquery, bootstrap, plugins ########## -->
-    <!-- ########## goes at the end of the page for faster loading ########## -->
-    <!-- ########## jquery, popper, then bootstrap ##########-->
+    <!-- ########## S C R I P T S ########## -->
     @RenderSection("Scripts", required: false)
     <partial name="_Scripts" />
-    <!-- / end S C R I P T S -->
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5825530.js"></script>
     <!-- End of HubSpot Embed Code -->
+    <!-- / end S C R I P T S -->
 </body>
 </html>
