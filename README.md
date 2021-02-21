@@ -1,4 +1,4 @@
-# Marketing_Website
+# MVC Website Template
 Marketing Website Code Template
 
 MVC.NET Code template for a marketing website.
